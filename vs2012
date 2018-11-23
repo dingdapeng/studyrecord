@@ -1,0 +1,3 @@
+1.Install-Package Costura.Fody -Version 1.6.2   把所有代码打包到一个文件 https://www.itsvse.com/thread-4677-1-1.html
+
+必须用1.6.2版本 nuget新版本好像不行

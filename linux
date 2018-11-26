@@ -1,0 +1,11 @@
+systemctl restart smb.service
+
+systemctl restart nmb.service
+
+
+systemctl status smb.service
+
+\\192.168.88.129\movie   第二个千万不要俩斜杆
+
+
+find  ./ -name  "*.cs" | xargs cat > ok.txt   把当前目录下的所有cs文件写入ok.txt

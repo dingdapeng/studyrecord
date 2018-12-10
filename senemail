@@ -1,3 +1,6 @@
+    private static void sendemail(string Subject, string body, string to)
+        {
+
             MailMessage mmsg = new MailMessage();
             //邮件主题
             mmsg.Subject = Subject;
@@ -11,15 +14,15 @@
             mmsg.Priority = MailPriority.Normal;
 
             //发件者邮箱地址
-            mmsg.From = "xxxx@163.com";//发件人地址;
+            mmsg.From = "chinagbacom@163.com";//发件人地址;
             //收件人收箱地址
-           
+            string email_address = "569305586@qq.com";
 
             mmsg.To = to;
 
             mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate", "1");
-            mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "xxxxx@163.com");
-            mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", "xxxxxxx");
+            mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "chinagbacom@163.com");
+            mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", "baigao123");
 
             mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserverport", "465");
             //是否ssl
@@ -35,3 +38,8 @@
             {
 
             }
+
+
+
+
+        }

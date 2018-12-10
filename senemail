@@ -1,0 +1,37 @@
+            MailMessage mmsg = new MailMessage();
+            //邮件主题
+            mmsg.Subject = Subject;
+
+            mmsg.BodyFormat = MailFormat.Html;
+            //邮件正文 
+            mmsg.Body = body;
+            //正文编码
+            mmsg.BodyEncoding = Encoding.UTF8;
+            //优先级
+            mmsg.Priority = MailPriority.Normal;
+
+            //发件者邮箱地址
+            mmsg.From = "xxxx@163.com";//发件人地址;
+            //收件人收箱地址
+           
+
+            mmsg.To = to;
+
+            mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate", "1");
+            mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "xxxxx@163.com");
+            mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", "xxxxxxx");
+
+            mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserverport", "465");
+            //是否ssl
+            mmsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpusessl", "true");
+            //Smtp服务器
+            System.Web.Mail.SmtpMail.SmtpServer = "smtp.163.com";
+            try
+            {
+                SmtpMail.Send(mmsg);
+
+            }
+            catch (Exception ex)
+            {
+
+            }

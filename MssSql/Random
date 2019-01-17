@@ -1,0 +1,2 @@
+SELECT 60+round(39*rand(checksum(newid())),0)
+这个是生成60到99 之间的随机数
